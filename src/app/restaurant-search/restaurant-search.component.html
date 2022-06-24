@@ -1,0 +1,33 @@
+<div  *ngIf="Employee.length !== 0" class="restaurantBox" >
+<div class="ui card inResBox" *ngFor="let employee of Employee">
+    <div class="image">
+        <svg class="heart" viewBox="0 0 32 29.6">
+            <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+              c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+          </svg> 
+
+      <img src="../../assets/img/food-doodle-set_160308-239.png">
+    </div>
+    <div class="content">
+      <div class="header">{{ employee.res_name }}</div>
+      <div class="description">
+        {{ employee.res_tanitim }}
+      </div>
+
+    </div>
+    <div class="ui two bottom attached buttons" routerLink="/restoran-tanitim">
+      <div class="ui button">
+        <i class="add icon"></i>
+        Detaylar
+      </div>
+      <div class="ui primary button" routerLink="/rezervasyon">
+        <i class="bi-bookmark icon" ></i>
+        Yer Ayır !
+      </div>
+    </div>
+  </div>
+  <div class="ui popup">
+    <div class="header">User Rating</div>
+    <div class="ui star rating" data-rating="3"></div>
+  </div>
+</div>
